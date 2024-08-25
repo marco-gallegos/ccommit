@@ -1,0 +1,34 @@
+{
+    "name": "ccommit",
+    "version": "1.0.0",
+    "description": "commit tool to easy work with conventional commits specification",
+    "main": "index.ts",
+    "private": false,
+    "scripts": {
+        "test": "echo 'no tests'",
+        "buildInline": "esbuild index.ts --bundle --platform=node --minify --packages=external --outfile=ccommit.js",
+        "build": "node build.mjs prod",
+        "build:dev": "node build.mjs dev",
+        "watch": "nodemon --exec 'npm run build:dev' -e ts"
+    },
+    "bin": {
+        "ccommit": "./ccommit.js"
+    },
+    "keywords": [
+        "commit",
+        "conventional",
+        "comventional commit",
+        "cli"
+    ],
+    "author": "Marco A. Gallegos Loaeza",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/marco-gallegos/ccommit"
+    },
+    "homepage": "https://github.com/marco-gallegos/ccommit",
+    "devDependencies": {
+        "esbuild": "^0.23.1",
+        "nodemon": "^3.1.4"
+    }
+}
